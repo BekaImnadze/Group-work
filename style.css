@@ -75,7 +75,7 @@ body {
 /* section 1 */
 
 .section-1 {
-  background-image: url("./assets/main\ cover\ photo.svg");
+  background-image: url("./assets/main-cover-photo.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -198,7 +198,7 @@ hr {
 /* section 3 */
 
 .section-3 {
-  background-image: url("./assets/second-cover\ photo.svg");
+  background-image: url("./assets/second-cover-photo.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
