@@ -3,3 +3,46 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.footerSection {
+  display: flex;
+  align-items: center;
+  box-shadow: 6px 0px 6px 0px #0000000d;
+  width: 1440px;
+  border-radius: 0px, 40px, 0px, 40px;
+}
+
+.footerLogo {
+  margin-top: 87px;
+  margin-left: 84px;
+  margin-right: 566px;
+}
+
+.footerHead {
+  display: flex;
+  align-items: center;
+  margin-top: 87px;
+  margin-right: 13px;
+  width: 227px;
+  height: 42px;
+}
+
+.social-Media {
+  display: flex;
+  align-items: center;
+  margin-top: 87px;
+  gap: 21px;
+}
+
+.footerAutor {
+  margin-top: 84px;
+  margin-bottom: 34px;
+}
+
+.footerAutor p {
+  font-size: 14px;
+  font-weight: 700px;
+  line-height: 21px;
+  margin-left: 88px;
+  color: #262626;
+}
