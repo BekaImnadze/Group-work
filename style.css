@@ -12,7 +12,7 @@ body {
   max-width: 1440px;
   height: 100%;
   margin: 0 auto;
-  padding-left: 0 84px;
+  padding: 0 84px;
 }
 
 .header-container {
@@ -121,6 +121,12 @@ body {
 
 /* section 2*/
 
+.section-2 {
+  border-bottom: 1px solid #bcbcbc;
+  padding-bottom: 87px;
+  margin-bottom: 52px;
+}
+
 .section-2-header {
   font-size: 32px;
   font-weight: 700;
@@ -132,7 +138,6 @@ body {
 .all-card {
   display: flex;
   gap: 10px;
-  margin-bottom: 87.5px;
 }
 
 .card-info {
@@ -165,6 +170,7 @@ body {
 .topic-button {
   width: 143.81px;
   height: 35.95px;
+  border: 1px solid #4ce0d7;
   border-radius: 40px;
   background-color: #4ce0d7;
   border-color: #4ce0d7;
@@ -190,21 +196,19 @@ hr {
 
 /* section 3 */
 
-.section-3 {
+.small-container {
+  padding: 0 34px;
+}
+
+.section_3 {
   background-image: url("./assets/second-cover-photo.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 1204px;
   height: 360px;
-  padding-left: 57px;
-  align-items: center;
   position: relative;
-  display: flex;
-  justify-content: start;
   border-radius: 20px;
   margin-bottom: 23px;
-  margin-left: 118px;
 }
 
 .section-3-topic {
@@ -229,20 +233,25 @@ hr {
 /*section 4*/
 
 .section-4 {
-  width: 1207px;
   margin-bottom: 45px;
 }
 .section-4-info {
   display: flex;
-  flex-direction: row;
   justify-content: start;
   align-items: center;
   margin-bottom: 30px;
 }
+.section-4-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 115px 0 64px;
+}
 
 .section-4-descr {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -253,7 +262,6 @@ hr {
   width: 70px;
   height: 82px;
   margin-right: 18px;
-  margin-left: 182px;
 }
 
 .section-4-info img {
@@ -286,15 +294,12 @@ hr {
   line-height: 21px;
   letter-spacing: 0.24em;
   color: #f25e5e;
-  margin-left: 389px;
 }
 
 /*section 5*/
 
 .section-5 {
-  width: 1204px;
   margin-bottom: 97px;
-  margin-left: 118px;
   border-radius: 20px;
   box-shadow: 0;
   box-shadow: 0px 6px 6px 0px #0000000d;
@@ -351,17 +356,24 @@ hr {
   line-height: 48px;
   color: #262626;
   margin-bottom: 55px;
-  margin-left: 118px;
+}
+
+.card_content {
+  padding: 0 0 42px 33px;
+}
+
+.card_content a {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 /* section 6 */
 
 .section-6 {
   display: flex;
-  width: 100%;
-  gap: 60px;
-  margin-left: 118px;
-  margin-bottom: 97px;
+  justify-content: center;
+  gap: 59px;
 }
 
 .section-6-cards {
@@ -582,27 +594,21 @@ hr {
   padding: 13px, 14.88px, 13px, 14.88px;
 }
 
+footer {
+  box-shadow: 6px 0px 6px 0px #0000000d;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
 .footerSection {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 6px 0px 6px 0px #0000000d;
-  width: 1440px;
-  border-radius: 0px, 40px, 0px, 40px;
+  padding-bottom: 34px;
 }
 
 .footerLogo {
   margin-top: 87px;
-  margin-left: 84px;
-  margin-right: 566px;
-}
-
-.footerHead {
-  display: flex;
-  align-items: center;
-  margin-top: 87px;
-  margin-right: 13px;
-  width: 227px;
-  height: 42px;
 }
 
 .social-Media {
@@ -612,15 +618,62 @@ hr {
   gap: 21px;
 }
 
+.social-Media h2 {
+  width: 100%;
+}
+
 .footerAutor {
-  margin-top: 84px;
+  padding-top: 50px;
   margin-bottom: 34px;
+  border-top: 1px solid black;
 }
 
 .footerAutor p {
   font-size: 14px;
   font-weight: 700px;
   line-height: 21px;
-  margin-left: 88px;
   color: #262626;
+}
+
+.card {
+  width: 579px;
+  border: 1px solid black;
+}
+
+.card .card_img {
+  position: relative;
+  background-image: url("./assets/trending-photo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+  height: 278px;
+}
+.card .card_img h2 {
+  border-radius: 20px;
+  background-color: #262626;
+  color: white;
+  width: 175px;
+  padding: 9px 0;
+  text-align: center;
+  font-size: 12px;
+
+  position: absolute;
+  top: 30px;
+  left: 34px;
+}
+
+.card_user_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 100px;
+  margin-top: 23px;
+  margin-bottom: 28px;
+}
+
+.card_user_photo {
+  display: flex;
+  align-items: center;
+  gap: 28px;
 }
