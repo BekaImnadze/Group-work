@@ -187,13 +187,6 @@ body {
   color: #4ce0d7;
 }
 
-hr {
-  border: 1px solid #bcbcbc;
-  margin-bottom: 52px;
-  margin-left: 85px;
-  max-width: 1267px;
-}
-
 /* section 3 */
 
 .small-container {
@@ -225,6 +218,8 @@ hr {
   border-radius: 40px;
   cursor: pointer;
 }
+
+.card_img h2 
 
 .section-3-topic:hover {
   color: #f25e5e;
@@ -385,9 +380,6 @@ hr {
   box-shadow: 0px 6px 6px 0px #0000000d;
 }
 
-.section-6-blog p:hover {
-  color: #f25e5e;
-}
 .section-6-blog img {
   width: 579.02px;
   height: 278.09px;
@@ -486,7 +478,6 @@ hr {
 .section-7-cards {
   display: flex;
   flex-direction: column;
-  margin-left: 118px;
   margin-bottom: 69px;
 }
 
@@ -594,7 +585,7 @@ hr {
   padding: 13px, 14.88px, 13px, 14.88px;
 }
 
-footer {
+.footer {
   box-shadow: 6px 0px 6px 0px #0000000d;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -637,7 +628,9 @@ footer {
 
 .card {
   width: 579px;
-  border: 1px solid black;
+  margin-bottom: 88px;
+  box-shadow: 0px 6px 6px 0px #0000000d;
+  border-radius: 20px;
 }
 
 .card .card_img {
@@ -657,11 +650,16 @@ footer {
   padding: 9px 0;
   text-align: center;
   font-size: 12px;
-
   position: absolute;
   top: 30px;
   left: 34px;
 }
+
+.card .card_img h2:hover {
+  color: #f25e5e;
+  cursor: pointer;
+}
+
 
 .card_user_info {
   display: flex;
@@ -676,4 +674,26 @@ footer {
   display: flex;
   align-items: center;
   gap: 28px;
+}
+
+.card_content .card_user_info .card_user_photos p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: red;
+  margin-bottom: 30px;
+}
+
+.card_content a {
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.24em;
+  text-align: left;
+  color: #4ce0d7;
+  text-decoration: none;
+  padding-top: 30px;
 }
