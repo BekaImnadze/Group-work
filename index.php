@@ -13,6 +13,7 @@
     />
   </head>
   <body>
+      <?php include "./dynamic.php" ?>
     <header>
       <div class="header-container container">
         <div class="header-logo">
@@ -159,181 +160,70 @@
         </div>
         <div class="section-6">
           <div class="card">
-            <div class="card_img">
-              <h2>LIFESTYLE</h2>
-            </div>
-            <div class="card_content">
-              <div class="card_user_info">
-                <div class="card_user_photo">
-                  <img src="./assets/author-image.svg" alt="author" />
-                  <p>Mallory Reyn</p>
-                </div>
-                <p>April 14th, 2023</p>
+            <?php
+              foreach($trendingCards as $cards) {
+                echo ' <div class="card_img">
+                <h2>"' . $cards["h2"] . '"</h2>
               </div>
-              <h2>10 Things to help you with social stress.</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur <br />
-                Pellentesque sit amet sapien fringilla, mattis <br />
-                mattis tellus. Nullam quis imperdietaugue.<br />
-                Vestibulum.
-              </p>
-              <a href="#"
-                ><img src="./assets/pointer-right.svg" alt="" /> READ MORE</a
-              >
-            </div>
-          </div>
-          <div class="card">
-            <div class="card_img">
-              <h2>LIFESTYLE</h2>
-            </div>
-            <div class="card_content">
-              <div class="card_user_info">
-                <div class="card_user_photo">
-                  <img src="./assets/author-image.svg" alt="author" />
-                  <p>Mallory Reyn</p>
+              <div class="card_content">
+                <div class="card_user_info">
+                  <div class="card_user_photo">
+                    <img src="' . $cards["img"] . '" alt="author" />
+                    <p>"' . $cards["author"] . '"</p>
+                  </div>
+                  <p>"' . $cards["date"] .'"</p>
                 </div>
-                <p>April 14th, 2023</p>
+                <h2>"' . $cards["h2-1"] . '".</h2>
+                <p>"' . $cards["smlText"] .'"</p>
+                <a href="#"
+                  ><img src="' . $cards["pointer"] .'" alt="" /> READ MORE</a>
               </div>
-              <h2>10 Things to help you with social stress.</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur Pellentesque sit amet
-                sapien fringilla, mattis mattis tellus. Nullam quis imperdiet
-                augue. Vestibulum.
-              </p>
-              <a href="#"
-                ><img src="./assets/pointer-right.svg" alt="" /> READ MORE</a
-              >
             </div>
+            ';
+            };
+            ?>
           </div>
         </div>
       </section>
       <section class="section-7 small-container">
         <div class="section-7-cards">
-          <div class="blog">
-            <div class="block-left">
-              <img src="./assets/block-sectrion-image 1.svg" alt="img" />
-              <p>FASHION</p>
-            </div>
-            <div class="block-right">
-              <div class="block-right-author">
-                <img src="./assets/author-image.svg" alt="image" />
-                <div class="author">
-                  <p>Mallory Reyn</p>
-                </div>
-                <div class="date">
-                  <p>April 14th, 2023</p>
-                </div>
-              </div>
-              <div class="section-7-topics">
-                <h2>
-                  5 Reasons to avoid shopping on <br />
-                  saturdays
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur Pellentesque <br />
-                  sit amet sapien fringilla, mattis mattis tellus.<br />
-                  Nullam quis imperdiet augue.Vestibulum.
-                </p>
-                <div class="section-7-readmore">
-                  <div class="section-7-readmor-img">
-                    <img src="./assets/pointer-right.svg" alt="pointer" />
-                  </div>
-                  <p>READ MORE</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="blog">
-            <div class="block-left">
-              <img src="./assets/blog-section-2-image.svg" alt="img" />
-              <p>ENSEMBLES</p>
-            </div>
-            <!-- block-left end -->
-            <div class="block-right">
-              <div class="block-right-author">
-                <div class="author-image">
-                  <img src="./assets/author-image.svg" alt="image" />
-                </div>
-                <!-- autor-image end-->
-                <div class="author">
-                  <p>Mallory Reyn</p>
-                </div>
-                <!-- author end -->
-                <div class="date">
-                  <p>April 14th, 2023</p>
-                </div>
-                <!-- date end -->
-              </div>
-              <!-- block right-author end-->
+        <?php 
 
-              <div class="section-7-topics">
-                <h2>
-                  10 Brands that remained<br />
-                  faithful to your classy look.
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur Pellentesque <br />
-                  sit amet sapien fringilla, mattis mattis tellus.<br />
-                  Nullam quis imperdiet augue.Vestibulum.
-                </p>
-                <div class="section-7-readmore">
-                  <div class="section-7-readmor-img">
-                    <img src="./assets/pointer-right.svg" alt="pointer" />
-                  </div>
-                  <p>READ MORE</p>
-                </div>
-                <!-- section-7-readmore end -->
-              </div>
-              <!-- section-7-topics end -->
-            </div>
-            <!-- block-right end -->
+for($i = 0; $i <sizeof($trendingBlogs); $i++){
+    echo '
+    <div class="blog">
+    <div class="block-left">
+      <img src="' . $trendingBlogs[$i]["img"] .'" alt="img" />
+      <p>"' . $trendingBlogs[$i]["smlText"] .'"</p>
+    </div>
+    <div class="block-right">
+      <div class="block-right-author">
+        <img src="' . $trendingBlogs[$i]["authorImg"] .'" alt="image" />
+        <div class="author">
+          <p>"' . $trendingBlogs[$i]["author"] . '"</p>
+        </div>
+        <div class="date">
+          <p>"' . $trendingBlogs[$i]["date"] . '"</p>
+        </div>
+      </div>
+      <div class="section-7-topics">
+        <h2>"' . $trendingBlogs[$i]["h2"] . '"</h2>
+        <p>"' . $trendingBlogs[$i]["lrgText"] .'"</p>
+        <div class="section-7-readmore">
+          <div class="section-7-readmor-img">
+            <img src="' . $trendingBlogs[$i]["pointer"] . '" alt="pointer" />
           </div>
-          <!-- blog end -->
-          <div class="blog">
-            <div class="block-left">
-              <img src="./assets/blog-section-3-image.svg" alt="img" />
-              <p>MENTAL HEALTH</p>
-            </div>
-            <!-- block-left end -->
-            <div class="block-right">
-              <div class="block-right-author">
-                <div class="author-image">
-                  <img src="./assets/author-image.svg" alt="image" />
-                </div>
-                <!-- autor-image end-->
-                <div class="author">
-                  <p>Mallory Reyn</p>
-                </div>
-                <!-- author end -->
-                <div class="date">
-                  <p>April 14th, 2023</p>
-                </div>
-                <!-- date end -->
-              </div>
-              <!-- block right-author end-->
+          <p>"' . $trendingBlogs[$i]["rMore"] . '"</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-              <div class="section-7-topics">
-                <h2>
-                  Mental health tips to cope<br />
-                  with stress.
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur Pellentesque <br />
-                  sit amet sapien fringilla, mattis mattis tellus.<br />
-                  Nullam quis imperdiet augue.Vestibulum.
-                </p>
-                <div class="section-7-readmore">
-                  <div class="section-7-readmor-img">
-                    <img src="./assets/pointer-right.svg" alt="pointer" />
-                  </div>
-                  <p>READ MORE</p>
-                  <!-- section-7-readmore end -->
-                </div>
-              </div>
-              <!-- section-7-topics end -->
-            </div>
-            <!-- block-right end -->
-          </div>
+    ';
+};
+
+
+ ?>  
           <!-- blog end -->
         </div>
         <!-- section-7-cards end-->
