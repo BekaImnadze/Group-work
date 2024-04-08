@@ -699,3 +699,17 @@ body {
   text-decoration: none;
   padding-top: 30px;
 }
+
+
+/*subcategory */
+
+.subcategory {
+  display: none;
+  position: absolute;
+}
+
+
+.category:hover .subcategory{
+  display: block;
+
+}

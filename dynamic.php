@@ -102,6 +102,62 @@ $trendingBlogs = [
         "rMore" => "READ MORE",
     ],
 ];
-?>
 
-       
+$categories = [
+    [
+        'link' => '/Fashion',
+        'name' => 'Fashion',
+        'subList' => 
+       [ 
+            [
+                'link' => '/Spring',
+                'name' => 'გაზაფხული',
+            ],
+            [
+                'link' => '/Summer',
+                'name' => 'ზაფხული',
+            ],
+
+        ]
+    ],
+    [
+        'link' => '/lifestyle',
+        'name' => 'Lifestyle',
+        'subList' => 
+        [
+            [
+                'link' => '/Fitness',
+                'name' => 'ფიტნესი',
+            ],
+            [
+                'link' => '/Food',
+                'name' => 'სმა-ჭამა',
+            ],
+        ]
+    ],
+    [
+        'link' => '/Spiritual',
+        'name' => 'Spiritual',
+        'subList' =>
+        [
+            [
+                'link' => '/Spiritual',
+                'name' => 'მედიტაცია',
+            ]
+        ]
+    ],
+    [
+        'link' => '/Mental Health',
+        'name' => 'Mental Health',
+        'subList' => [
+            [
+                'link' => '/Mental house',
+                'name' => 'საგიჟეთი',
+            ]
+        ]
+    ],
+];
+
+
+
+?>

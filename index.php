@@ -21,18 +21,22 @@
         </div>
         <nav class="header-navigation">
           <ul class="header-list">
-            <li>
-              <a href="#">Fashion</a>
-            </li>
-            <li>
-              <a href="#">Lifestyle</a>
-            </li>
-            <li>
-              <a href="#">Spiritual</a>
-            </li>
-            <li>
-              <a href="#">Mental Health</a>
-            </li>
+          <?php
+                foreach($categories as $category) {
+                  echo '<li class="category">
+                          <a class="link" href="' . $category['link'] . '">' . $category['name'] . '</a>
+                            <ul class="subcategory">';
+                              
+                            foreach (($category['subList']) as $subcategory) {
+                              echo '<li>
+                                  <a class="link" href="' . $subcategory['link'] . '">' . $subcategory['name'] . '</a>
+                              </li>';
+                            }
+
+                    echo '</ul>
+                       </li>';
+                     }
+            ?>
             <li>
               <a class="header-contact" href="#">Contact Us</a>
             </li>
@@ -218,15 +222,10 @@ for($i = 0; $i <sizeof($trendingBlogs); $i++){
       </div>
     </div>
   </div>
-
     ';
 };
-
-
  ?>  
-          <!-- blog end -->
         </div>
-        <!-- section-7-cards end-->
       </section>
     </main>
     <footer>
