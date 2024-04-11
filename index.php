@@ -14,6 +14,7 @@
   </head>
   <body>
       <?php include "./dynamic.php" ?>
+      <?php include "./function.php" ?>
     <header>
       <div class="header-container container">
         <div class="header-logo">
@@ -63,48 +64,8 @@
           <h1>Topics</h1>
         </div>
         <div class="all-card">
-          <div class="card-info">
-            <div class="card-img">
-              <img src="./assets/Lingerie.svg" alt="Image" />
-            </div>
-            <h2>Lingerie</h2>
-            <button class="topic-button">View More</button>
-          </div>
-          <div class="card-info">
-            <div class="card-img">
-              <img src="./assets/Spring.svg" alt="Image" />
-            </div>
-            <h2>Spring</h2>
-            <button class="topic-button">View More</button>
-          </div>
-          <div class="card-info">
-            <div class="card-img">
-              <img src="./assets/Yoga.svg" alt="Image" />
-            </div>
-            <h2>Yoga</h2>
-            <button class="topic-button">View More</button>
-          </div>
-          <div class="card-info">
-            <div class="card-img">
-              <img src="./assets/glow.svg" alt="Image" />
-            </div>
-            <h2>Glow</h2>
-            <button class="topic-button">View More</button>
-          </div>
-          <div class="card-info">
-            <div class="card-img">
-              <img src="./assets/Ensembles.svg" alt="Image" />
-            </div>
-            <h2>Ensembles</h2>
-            <button class="topic-button">View More</button>
-          </div>
-          <div class="card-info">
-            <div class="card-img">
-              <img src="./assets/skin-care.svg" alt="Image" />
-            </div>
-            <h2>Skin Care</h2>
-            <button class="topic-button">View More</button>
-          </div>
+
+          <?php topicsCards($topicsCard); ?>
         </div>
       </section>
       <section class="small-container">
@@ -193,38 +154,38 @@
         <div class="section-7-cards">
         <?php 
 
-for($i = 0; $i <sizeof($trendingBlogs); $i++){
-    echo '
-    <div class="blog">
-    <div class="block-left">
-      <img src="' . $trendingBlogs[$i]["img"] .'" alt="img" />
-      <p>"' . $trendingBlogs[$i]["smlText"] .'"</p>
-    </div>
-    <div class="block-right">
-      <div class="block-right-author">
-        <img src="' . $trendingBlogs[$i]["authorImg"] .'" alt="image" />
-        <div class="author">
-          <p>"' . $trendingBlogs[$i]["author"] . '"</p>
+    for($i = 0; $i <sizeof($trendingBlogs); $i++){
+        echo '
+        <div class="blog">
+        <div class="block-left">
+          <img src="' . $trendingBlogs[$i]["img"] .'" alt="img" />
+          <p>"' . $trendingBlogs[$i]["smlText"] .'"</p>
         </div>
-        <div class="date">
-          <p>"' . $trendingBlogs[$i]["date"] . '"</p>
-        </div>
-      </div>
-      <div class="section-7-topics">
-        <h2>"' . $trendingBlogs[$i]["h2"] . '"</h2>
-        <p>"' . $trendingBlogs[$i]["lrgText"] .'"</p>
-        <div class="section-7-readmore">
-          <div class="section-7-readmor-img">
-            <img src="' . $trendingBlogs[$i]["pointer"] . '" alt="pointer" />
+        <div class="block-right">
+          <div class="block-right-author">
+            <img src="' . $trendingBlogs[$i]["authorImg"] .'" alt="image" />
+            <div class="author">
+              <p>"' . $trendingBlogs[$i]["author"] . '"</p>
+            </div>
+            <div class="date">
+              <p>"' . $trendingBlogs[$i]["date"] . '"</p>
+            </div>
           </div>
-          <p>"' . $trendingBlogs[$i]["rMore"] . '"</p>
+          <div class="section-7-topics">
+            <h2>"' . $trendingBlogs[$i]["h2"] . '"</h2>
+            <p>"' . $trendingBlogs[$i]["lrgText"] .'"</p>
+            <div class="section-7-readmore">
+              <div class="section-7-readmor-img">
+                <img src="' . $trendingBlogs[$i]["pointer"] . '" alt="pointer" />
+              </div>
+              <p>"' . $trendingBlogs[$i]["rMore"] . '"</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-    ';
-};
- ?>  
+        ';
+    };
+    ?>  
         </div>
       </section>
     </main>

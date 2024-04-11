@@ -158,6 +158,39 @@ $categories = [
     ],
 ];
 
-
+$topicsCard = [
+    [
+        'img' => './assets/Lingerie.svg',
+        'h2' => 'Lingerie',
+        'btn' => 'View More',
+    ],
+    [
+        'img' => './assets/Spring.svg',
+        'h2' => 'Spring',
+        'btn' => 'View More',
+    ],
+    [
+        'img' => './assets/Yoga.svg',
+        'h2' => 'Yoga',
+        'btn' => 'View More',
+    ],
+    [
+        'img' => './assets/glow.svg',
+        'h2' => 'Glow',
+        'btn' => 'View More',
+    ],
+    [
+        'img' => './assets/Ensembles.svg',
+        'h2' => 'Ensembles',
+        'btn' => 'View More',
+    ],
+    [
+        'img' => './assets/skin-care.svg',
+        'h2' => 'Skin Care',
+        'btn' => 'View More',
+    ],
+    
+]
 
 ?>
+
